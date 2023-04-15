@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.dayvatas.landmarkbook.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,12 @@ class MainActivity : AppCompatActivity() {
         landmarkList.add(londonBridge)
         landmarkList.add(eiffel)
         landmarkList.add(colosseum)
+
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        val layoutAdapter = LandmarkAdapter(landmarkList)
+        binding.recyclerView.adapter = layoutAdapter
+
+
 /*
         //Adapter: Layout & Data
         //Mapping
