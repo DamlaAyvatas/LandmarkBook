@@ -1,5 +1,7 @@
 package com.dayvatas.landmarkbook
 
-class Landmark (val name : String, val country : String, val Image : Int){
+import java.io.Serializable
+
+class Landmark (val name : String, val country : String, val Image : Int) : Serializable {
 
 }
