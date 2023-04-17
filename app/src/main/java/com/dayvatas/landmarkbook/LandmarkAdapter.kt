@@ -22,6 +22,10 @@ class LandmarkAdapter(val landmarkList : ArrayList<Landmark>) : RecyclerView.Ada
 
     override fun onBindViewHolder(holder: LandmarkHolder, position: Int) {
         holder.binding.recyclerViewTextView.text = landmarkList[position].name
+        holder.itemView.setOnClickListener{
+            val intent = Intent()
+
+        }
     }
 
     override fun getItemCount(): Int {
