@@ -23,7 +23,9 @@ class LandmarkAdapter(val landmarkList : ArrayList<Landmark>) : RecyclerView.Ada
     override fun onBindViewHolder(holder: LandmarkHolder, position: Int) {
         holder.binding.recyclerViewTextView.text = landmarkList[position].name
         holder.itemView.setOnClickListener{
-            val intent = Intent()
+            val intent = Intent(holder.itemView.context, DetailsActivity::class.java)
+            intent.putExtra("landmark", landmarkList.get(position))  //seçilen Landmark'ı diğer sayfaya aktarmak
+            holder.itemView.context.startActivity(intent)
 
         }
     }

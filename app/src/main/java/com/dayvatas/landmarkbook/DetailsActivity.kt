@@ -16,7 +16,7 @@ class DetailsActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-    /*
+
         val intent = intent
         //casting
         val selectedLandmark = intent.getSerializableExtra("landmark", Landmark::class.java) as Landmark
@@ -26,6 +26,6 @@ class DetailsActivity : AppCompatActivity() {
         binding.nameText.text = selectedLandmark.name
         binding.countryText.text = selectedLandmark.country
         binding.imageView.setImageResource(selectedLandmark.Image)
-*/
+
     }
 }
