@@ -26,9 +26,9 @@ class DetailsActivity : AppCompatActivity() {
         val selectedLandmark = MySingleton.chosenLandmark
 
         selectedLandmark.let {
-            binding.nameText.text = selectedLandmark?.name
-            binding.countryText.text = selectedLandmark?.country
-            binding.imageView.setImageResource(selectedLandmark?.Image!!)
+            binding.nameText.text = it?.name
+            binding.countryText.text = it?.country
+            binding.imageView.setImageResource(it?.Image!!)
         }
     }
 }
